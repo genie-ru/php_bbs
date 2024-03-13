@@ -1,3 +1,13 @@
+<?php
+
+$title = "Geniecode";
+//var_dump($title);
+//print_r($title);
+$username = $_POST['username'];
+var_dump($username);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +40,7 @@
                     </div>
                 </article>      
             </section>
-            <form class="formWrapper">
+            <form class="formWrapper" method="POST">
                 <div>
                     <input type="submit" value="書き込む">
                     <label>名前:</label>
