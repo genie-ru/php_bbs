@@ -30,6 +30,16 @@
                     </div>
                 </article>      
             </section>
+            <form class="formWrapper">
+                <div>
+                    <input type="submit" value="書き込む">
+                    <label>名前:</label>
+                    <input type="text" name="username">
+                </div>
+                <div>
+                    <textarea class="commentTextArea"></textarea>
+                </div>
+            </form>
         </div>
     </div>
 </body>
