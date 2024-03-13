@@ -3,8 +3,13 @@
 $title = "Geniecode";
 //var_dump($title);
 //print_r($title);
-$username = $_POST['username'];
-var_dump($username);
+if(isset($_POST["submitButton"])) {
+
+    $username = $_POST['username'];
+    var_dump($username);
+    $body = $_POST['body'];
+    var_dump($body);
+}
 ?>
 
 
@@ -42,12 +47,12 @@ var_dump($username);
             </section>
             <form class="formWrapper" method="POST">
                 <div>
-                    <input type="submit" value="書き込む">
+                    <input type="submit" value="書き込む" name="submitButton">
                     <label>名前:</label>
                     <input type="text" name="username">
                 </div>
                 <div>
-                    <textarea class="commentTextArea"></textarea>
+                    <textarea class="commentTextArea" name="body"></textarea>
                 </div>
             </form>
         </div>
