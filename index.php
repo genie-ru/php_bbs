@@ -1,5 +1,7 @@
 <?php
 
+include_once("./app/datebase/connect.php");
+
 $title = "Geniecode";
 //var_dump($title);
 //print_r($title);
