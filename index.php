@@ -20,7 +20,7 @@ $statement->execute();
 
 $comment_array = $statement;
 
-var_dump($comment_array->fetchObject());
+// var_dump($comment_array->fetchObject());
 ?>
 
 
@@ -45,16 +45,18 @@ var_dump($comment_array->fetchObject());
                 <h1>掲示板を作ってみた</h1>
             </div>
             <section>
-                <article>
-                    <div class="wrapper">
-                        <div class="nameArea">
-                            <span>名前:</span>
-                            <p class="username">GenieCode</p>
-                            <time>:2024/3/14 17:51</time>
+                <?php foreach($comment_array as $comment) :?>
+                    <article>
+                        <div class="wrapper">
+                            <div class="nameArea">
+                                <span>名前:</span>
+                                <p class="username"><?php echo $comment["username"]; ?></p>
+                                <time>:<?php echo $comment["post_date"]; ?></time>
+                            </div>
+                            <p class="comment"><?php echo $comment["body"]; ?></p>
                         </div>
-                        <p class="comment">手書きのコメントです。</p>
-                    </div>
-                </article>      
+                    </article>   
+                <?php endforeach ?>    
             </section>
             <form class="formWrapper" method="POST">
                 <div>
